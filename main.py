@@ -214,8 +214,11 @@ def main():
             times += 1
             tries(peoples[names].lives)
             print(f'{names} win(s)\nthe word(s) was {thewordis}')
-            print(f'it took {times} trie(s) untill {names} won')
-            input("Press Enter to continue...")
+            print(f'it took {times} trie(s) until {names} won')
+            break
+        if len(peoples) == 0:
+            clear()
+            print(f'{names} game over that took {times} tries\nno one knew the word(s)\nthe word(s) was {thewordis}')
             break
         times += 1
         clear()
